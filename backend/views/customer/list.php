@@ -225,7 +225,7 @@ use yii\web\View;
             <div class="col-lg-12">
                 <div class="ibox float-e-margins">
                     <div class="ibox-title">
-                        <a href="<?= Url::toRoute("add") ?>" class="btn btn-primary"> 新增人才 </a>
+                        <a href="<?= Url::toRoute("add") ?>" class="btn btn-primary"> 新增客户 </a>
                     </div>
 
                     <div class="ibox-content">
@@ -284,7 +284,7 @@ use yii\web\View;
                                     </td>
                                     <td class="">
                                         <div class="btn-group">
-                                            <button class="btn-white btn btn-xs"><a href="<?php Url::toRoute(['look'])?>">查看</a></button>
+                                            <button class="btn-white btn btn-xs" style="display: none"><a href="<?php Url::toRoute(['look'])?>">查看</a></button>
                                             <button class="btn-white btn btn-xs"><a href="<?php echo Url::toRoute(['edit', 'id'=>$value->id])?>">编辑</a></button>
                                         </div>
                                     </td>
