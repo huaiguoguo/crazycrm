@@ -48,7 +48,7 @@ class CustomerController extends EController
         $data = [];
         $Customer = new Customer();
         if ($Customer->load(Yii::$app->request->post()) && $Customer->save()) {
-            return $this->goBack();
+            return $this->redirect("customer/list");
         }
         $data['customer'] = $Customer;
         $data['error'] = $Customer->getErrors();
@@ -77,7 +77,7 @@ class CustomerController extends EController
         $Customer = Customer::findOne($id);
 
         if ($Customer->load(Yii::$app->request->post()) && $Customer->save()) {
-            return $this->goBack();
+            return $this->redirect("customer/list");
         }
 
         $data['customer'] = $Customer;

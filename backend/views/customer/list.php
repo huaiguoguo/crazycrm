@@ -236,9 +236,12 @@ use yii\web\View;
                             <tr>
                                 <th>姓名</th>
                                 <th>手机</th>
-                                <th data-hide="phone,tablet">邮箱</th>
-                                <th data-hide="phone,tablet">QQ</th>
-                                <th data-hide="phone,tablet">工作年限</th>
+                                <th>性别</th>
+                                <th data-hide="qq,tablet">QQ</th>
+                                <th data-hide="wechat,tablet">微信</th>
+                                <th data-hide="email,tablet">邮箱</th>
+                                <th data-hide="type,tablet">注册类型</th>
+                                <th data-hide="status,tablet">状态</th>
                                 <th data-hide="phone,tablet">操作</th>
                             </tr>
                             </thead>
@@ -247,9 +250,37 @@ use yii\web\View;
                                 <tr class="gradeX">
                                     <td><?=$value->username;?></td>
                                     <td><?=$value->mobile;?></td>
+                                    <td><?php if($value->gender==1){echo "男";}elseif($value->gender==2){echo "女";};?></td>
+                                    <td><?=$value->qq;?></td>
+                                    <td><?=$value->wechat;?></td>
                                     <td><?=$value->email;?></td>
-                                    <td class="center"><?=$value->qq;?></td>
-                                    <td class="center"><?=$value->work_life;?>年</td>
+                                    <td class="center">
+                                        <?php
+                                        if($value->type ==1){
+                                            echo "注册公司";
+                                        }elseif($value->type ==2){
+                                            echo "注册商标";
+                                        }
+                                        ?>
+                                    </td>
+                                    <td class="center">
+                                        <?php
+                                        switch($value->status){
+                                            case 1:
+                                                $status_text = "咨询中";
+                                                break;
+                                            case 2:
+                                                $status_text = "已交押金";
+                                                break;
+                                            case 3:
+                                                $status_text = "已付费";
+                                                break;
+                                            case 4:
+                                                $status_text = "已完结";
+                                                break;
+                                        }
+                                        ?>
+                                    </td>
                                     <td class="">
                                         <div class="btn-group">
                                             <button class="btn-white btn btn-xs"><a href="<?php Url::toRoute(['look'])?>">查看</a></button>

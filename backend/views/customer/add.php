@@ -64,7 +64,7 @@ use yii\web\View;
                                         <option value="1" <?php if($customer->status==1):?> selected <?php endif;?>>咨询中</option>
                                         <option value="2" <?php if($customer->status==2):?> selected <?php endif;?>>已交押金</option>
                                         <option value="3" <?php if($customer->status==3):?> selected <?php endif;?>>已付费</option>
-                                        <option value="3" <?php if($customer->status==3):?> selected <?php endif;?>>已完结</option>
+                                        <option value="4" <?php if($customer->status==3):?> selected <?php endif;?>>已完结</option>
                                     </select>
                                 </div>
                                 <span class='has-error'><div class="help-block"><?php if(isset($error['status'])){echo $error['status'][0];};?></div></span>
