@@ -229,7 +229,7 @@ use yii\web\View;
                     </div>
 
                     <div class="ibox-content">
-                        <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="Search in table">
+                        <input type="text" class="form-control input-sm m-b-xs" id="filter" placeholder="从表中搜索">
 
                         <table class="footable table table-stripped" data-page-size="8" data-filter=#filter>
                             <thead>
