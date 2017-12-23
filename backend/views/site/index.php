@@ -11,7 +11,7 @@ $this->title = '';
 <div class="row  border-bottom white-bg dashboard-header">
 
     <div class="col-md-3">
-        <h2>欢迎你 <?=Yii::$app->user->username;?></h2>
+        <h2>欢迎你 <?=Yii::$app->user->identity->username;?></h2>
         <small>你有 42 条消息 和 6 条通知.</small>
         <ul class="list-group clear-list m-t">
             <li class="list-group-item fist-item">
