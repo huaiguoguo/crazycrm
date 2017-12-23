@@ -279,6 +279,7 @@ use yii\web\View;
                                                 $status_text = "已完结";
                                                 break;
                                         }
+                                        echo $status_text;
                                         ?>
                                     </td>
                                     <td class="">
