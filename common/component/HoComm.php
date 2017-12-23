@@ -122,7 +122,7 @@ class HoComm extends Component
             'options' => ['class' => 'nav-header'],
             'label'   => '
                                                                 <div class="dropdown profile-element"> 
-                                                                                        <span> <img alt="image" class="img-circle" src="/inspinia/img/profile_small.jpg"/> </span>
+                                                                                        <span> <img alt="image" class="img-circle" src="'.Yii::$app->user->identity->avatar.'"/> </span>
                                                                                         <a data-toggle="dropdown" class="dropdown-toggle" href="full_height.html#">
                                                                                              <span class="clear"> 
                                                                                                <span class="block m-t-xs"><strong class="font-bold">'.Yii::$app->user->identity->username.'</strong></span> 
