@@ -11,8 +11,8 @@ use Yii;
  * @property integer $uid
  * @property string $nickname
  * @property string $username
- * @property integer $mobile
- * @property integer $qq
+ * @property string $mobile
+ * @property string $qq
  * @property string $email
  * @property integer $status
  * @property integer $func_id
@@ -59,9 +59,9 @@ class Customer extends \yii\db\ActiveRecord
     {
         return [
             [['username', 'mobile', 'qq', 'status', 'wechat', 'gender', 'location_province', 'location_ctiy', 'type'], 'required', 'message'=>'{attribute}不能为空'],
-            [['mobile','uid', 'qq', 'status', 'func_id', 'gender', 'location_province', 'location_ctiy', 'expectation_province', 'expectation_city', 'expectation_industry', 'expectation_func', 'marry', 'work_life', 'birthday', 'type', 'resume_id'], 'integer'],
+            [['uid', 'status', 'func_id', 'gender', 'location_province', 'location_ctiy', 'expectation_province', 'expectation_city', 'expectation_industry', 'expectation_func', 'marry', 'work_life', 'birthday', 'type', 'resume_id'], 'integer'],
             [['annual_salary', 'expectation_annual_salary'], 'number'],
-            [['skill_evaluation', 'self_evaluation'], 'string'],
+            [['skill_evaluation','qq', 'mobile', 'self_evaluation'], 'string'],
             [['nickname', 'username'], 'string', 'max' => 20],
             [['email'], 'string', 'max' => 40],
             [['skill', 'photos', 'website', 'remarks'], 'string', 'max' => 255],
